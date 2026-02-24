@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Calculator</title>
+		<link rel="stylesheet" type="text/css" href="calc.css">
+		<meta name="viewport" content="width=device-width">
+
+		<script type="text/javascript">
+			function addvalue(val){
+				document.getElementById("content").innerHTML+=val;
+			}
+			function cleardis(){
+				document.getElementById("content").innerHTML="";
+			}	
+			function result(){
+				
+				let exp=document.getElementById("content").innerHTML;
+				try{
+					document.getElementById("content").innerHTML=eval(exp);
+				}catch{
+					document.getElementById("content").innerHTML="Error";
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+		<h3>CALCULATOR</h3>
+		</header>
+		<main>
+		<center>
+		<div class="outer">
+			<div class="dis">
+				<p id="content"></p>
+			</div>
+			<div class="buttons yellow" onclick="addvalue('7')">7</div>
+			<div class="buttons yellow" onclick="addvalue('8')">8</div>
+			<div class="buttons yellow" onclick="addvalue('9')">9</div>
+			<div class="buttons red" onclick="addvalue('+')">+</div>
+			<div class="buttons yellow" onclick="addvalue('4')">4</div>
+			<div class="buttons yellow" onclick="addvalue('5')">5</div>
+			<div class="buttons yellow" onclick="addvalue('6')">6</div>
+			<div class="buttons green" onclick="addvalue('-')">-</div>
+			<div class="buttons yellow" onclick="addvalue('1')">1</div>
+			<div class="buttons yellow" onclick="addvalue('2')">2</div>
+			<div class="buttons yellow" onclick="addvalue('3')">3</div>
+			<div class="buttons blue" onclick="addvalue('*')">x</div>
+			<div class="buttons red" onclick="cleardis()">c</div>
+			<div class="buttons yellow" onclick="addvalue('0')">0</div>
+			<div class="buttons d_blue" onclick="result()">=</div>
+			<div class="buttons v" onclick="addvalue('/')">/</div>
+
+		</div>
+		</center>
+		</main>
+	</body>
+</html>
