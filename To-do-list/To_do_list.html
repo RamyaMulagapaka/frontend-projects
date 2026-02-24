@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>To_do_list</title>
+		<link rel="stylesheet" type="text/css" href="to-do-list.css">
+	</head>
+	<body>
+		<header class="head">
+			<h2>TODO List</h2>
+		</header>
+		<main>
+			<h2>Add items</h2>
+			<input type="text" placeholder="you can enter items here to add" id="input">
+			<button type="button" class="b0" onclick="addTask()">Submit</button>
+			<h3>Tasks</h3>
+			<div class="t">
+			<ul id="List"></ul>
+			</div>
+				
+		</main>	
+		<script type="text/javascript">
+			function addTask(){
+				let input=document.getElementById("input");
+				let content=input.value.trim();
+
+				if(content===""){
+					alert("Please enter a task");
+					return;
+				}
+				let li=document.createElement("li");
+				li.textContent=content;
+				let editbtn=document.createElement("button");
+				editbtn.innerText="Edit";
+				editbtn.className="edit";
+				editbtn.onclick=function(){
+					let newtask=prompt("Edit task : ",li.firstChild.nodeValue);
+					if(newtask!==null && newtask.trim()!==""){
+						li.firstChild.nodeValue=newtask;
+					}
+				};
+				let delbtn=document.createElement("button");
+				delbtn.innerText="Delete";
+				delbtn.className="del";
+				delbtn.onclick=function(){
+					li.remove();
+				};
+				li.appendChild(editbtn);
+				li.appendChild(delbtn);
+				document.getElementById("List").appendChild(li);
+				input.value="";
+			}
+		</script>	
+	</body>
+</html>

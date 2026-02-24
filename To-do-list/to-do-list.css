@@ -1,0 +1,50 @@
+.head{
+background-color:lime;
+color:black;
+padding:10px;
+}
+
+input[type=text]{
+	width:75%;
+	padding:10px;
+	background-color:white;
+	border-radius:5px;
+}
+.b0{
+background-color:black;
+color:white;
+padding:10px;
+border:none;
+border-radius:5px;
+}
+.t{
+border:0.5px solid black;
+border-radius:5px;
+}
+.edit{
+padding:8px;
+background-color:green;
+color:white;
+margin:10px;
+border:none;
+border-radius:5px;
+position:absolute;
+right:80px;
+}
+.del{
+padding:8px;
+background-color:red;
+color:white;
+margin:10px;
+border:none;
+border-radius:5px;
+position:absolute;
+right:10px;
+}
+li{
+font-size:2rem;
+list-style:circle;
+font-family:sans-serif;
+font-style:bold;
+}
+
