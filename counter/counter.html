@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Counter</title>
+<style>
+	body{
+		background:linear-gradient(orange,yellow);
+	}
+	button{
+		padding:10px;
+		margin:20px;
+	}
+	p{
+		font-size:5rem;
+		margin-top:50px;
+		color:white;
+		text-shadow:2px 2px silver;
+	}
+	h1{
+		margin-top:30px;
+		font-size:2rem;
+		color:brown;
+		text-shadow:2px 2px aqua;
+	}
+	.b1{
+		background-color:lime;
+		color:white;
+		font-size:2rem;
+		font-family:Lucida console;
+		box-shadow:2px 2px white;
+		border:none;
+
+	}
+	.b2{
+		background-color:blue;
+		color:white;
+		font-size:2rem;
+		font-family:Lucida console;
+		box-shadow:2px 2px white;
+		border:none;
+
+	}
+	
+	.b3{
+		background-color:red;
+		color:white;
+		font-size:2rem;
+		font-family:Verdana;
+		box-shadow:2px 2px white;
+		border:none;
+
+	}
+	
+</style>
+</head>
+<body>
+	<div>
+		<h1 align="center">Counter App</h1>
+	</div>
+	<div class="container">
+		<center>
+		<div class="counter">
+			<p id="count">0</p>
+		</div>
+		<div>
+			<button class="b1" onclick="incre()">Increment</button>
+			<button class="b2" onclick="decre()">Decrement</button>
+			<button class="b3" onclick="reset()">Reset</button>
+
+		</div>
+		</center>
+	</div>
+	<script type="text/javascript">
+				
+		function incre() {
+  			var c = document.getElementById("count").innerText;
+  			c = parseInt(c);                                   
+  			c = c + 1;                                        
+  			document.getElementById("count").innerText = c; 
+		}
+
+		function decre() {
+  			var c = document.getElementById("count").innerText;
+  			c = parseInt(c);                                  
+  			c = c - 1;                                         
+ 			document.getElementById("count").innerText = c;
+		}
+
+		function reset() {                                        
+ 			document.getElementById("count").innerText = 0;
+		}
+
+
+	</script>
+</body>
+</html>
